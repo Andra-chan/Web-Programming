@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P4</title>
+    <script src="P4script.js"> </script>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        table {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <table id="1">
+        <tr>
+            <th onclick=sortColumn(this)>Fructe</th>
+            <td>Mere</td>
+            <td>Pere</td>
+            <td>Banane</td>
+            <td>Ananas</td>
+            <td>Portocale</td>
+        </tr>
+        <tr>
+            <th onclick=sortColumn(this)>Pret</th>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>12</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <th onclick=sortColumn(this)>Cantitate</th>
+            <td>8</td>
+            <td>6</td>
+            <td>4</td>
+            <td>1</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <table id="2">
+        <tr>
+            <th onclick=sortColumn(this)>Masini</th>
+            <td>Volkswagen</td>
+            <td>Skoda</td>
+            <td>Nissan</td>
+            <td>Audi</td>
+        </tr>
+        <tr>
+            <th onclick=sortColumn(this)>Pret</th>
+            <td>8530</td>
+            <td>3500</td>
+            <td>1000</td>
+            <td>1020000000</td>
+        </tr>
+        <tr>
+            <th onclick=sortColumn(this)>Cantitate</th>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>10</td>
+        </tr>
+    </table>
+
+    <table id="3">
+        <tr>
+            <th onclick=sortColumn(this)>Parfum</th>
+            <td>De dama</td>
+            <td>De smecher</td>
+            <td>De bunica</td>
+            <td>De masina</td>
+        </tr>
+        <tr>
+            <th onclick=sortColumn(this)>Pret</th>
+            <td>1500</td>
+            <td>10</td>
+            <td>30</td>
+            <td>1020000000</td>
+        </tr>
+        <tr>
+            <th onclick=sortColumn(this)>Cantitate</th>
+            <td>10</td>
+            <td>40002845333</td>
+            <td>300000</td>
+            <td>1</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
