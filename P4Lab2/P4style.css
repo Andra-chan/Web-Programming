@@ -1,0 +1,117 @@
+img{
+    display: block; /* Verticala */
+}
+
+
+#eleven{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 84px 84px;
+}
+
+#ten{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 168px 84px;
+}
+
+#nine{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 252px 84px;
+}
+
+#eight{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 336px 84px;
+}
+
+#seven{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 420px 84px;
+}
+
+#six{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 504px 84px;
+}
+
+#five{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 588px 84px;
+}
+
+#four{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 672px 84px;
+}
+
+#three{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 756px 84px;
+}
+
+#two{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 840px 84px;
+}
+
+#one{
+    width: 84px;
+    height: 84px;
+    background: url(P4photo.png) 0px 84px;
+}
+
+
+#eleven:hover{
+    background: url(P4photo.png) 84px 0;
+}
+
+#ten:hover{
+    background: url(P4photo.png) 168px 0;
+}
+
+#nine:hover{
+    width: 84px;
+    background: url(P4photo.png) 252px 0;
+}
+
+#eight:hover{
+    background: url(P4photo.png) 336px 0;
+}
+
+#seven:hover{
+    width: 84px;
+    background: url(P4photo.png) 420px 0;
+}
+
+#six:hover{
+    background: url(P4photo.png) 504px 0;
+}
+
+#five:hover{
+    background: url(P4photo.png) 588px 0;
+}
+
+#four:hover{
+    background: url(P4photo.png) 672px 0;
+}
+
+#three:hover{
+    background: url(P4photo.png) 756px 0;
+}
+
+#two:hover{
+    background: url(P4photo.png) 840px 0;
+}
+
+#one:hover{
+    background: url(P4photo.png) 0 0px;
+}

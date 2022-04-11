@@ -1,0 +1,26 @@
+input[type="text"] {
+    border: solid 1px dimgrey;
+    width: 400px;
+    background: repeating-linear-gradient(90deg, #ffffff 0px, #ffffff 19px, #000000 20px);
+    color: black;
+    font-family: monospace;
+    letter-spacing: 1.75ch;
+
+}
+
+#one{
+    width: 395px;
+}
+
+#two{
+    width: 395px;
+}
+
+#three{
+    width: 255px;
+}
+
+input:focus {
+    outline: none;
+    color: orange;
+}
