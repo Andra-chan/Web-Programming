@@ -1,4 +1,9 @@
+var ascending = false;
 function sortColumn(columnHeader) {
+    if(ascending == false)
+        ascending=true;
+    else
+        ascending=false;
     let sortCriteria = columnHeader.innerHTML;
     let table = columnHeader.parentNode.parentNode.parentNode;
     let toSort = new Array(table.rows[0].length);
@@ -17,18 +22,33 @@ function sortColumn(columnHeader) {
             let el1 = toSort[i].innerHTML;
             for (let j = i + 1; j < toSort.length; j++) {
                 let el2 = toSort[j].innerHTML;
-                if (!isNaN(el1)) {
-                    if (parseInt(el1) > parseInt(el2)) {
-                        [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
-                        [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
-                        sorted = false;
+                if (ascending) {
+                    if (!isNaN(el1)) {
+                        if (parseInt(el1) > parseInt(el2)) {
+                            [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
+                            [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
+                            sorted = false;
+                        }
+                    } else {
+                        if (el1 > el2) {
+                            [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
+                            [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
+                            sorted = false;
+                        }
                     }
-                }
-                else {
-                    if (el1 > el2) {
-                        [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
-                        [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
-                        sorted = false;
+                } else {
+                    if (!isNaN(el1)) {
+                        if (parseInt(el1) < parseInt(el2)) {
+                            [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
+                            [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
+                            sorted = false;
+                        }
+                    } else {
+                        if (el1 < el2) {
+                            [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
+                            [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
+                            sorted = false;
+                        }
                     }
                 }
             }

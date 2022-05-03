@@ -25,19 +25,31 @@
         height: 0;
     }
 
+    .coveredNr{
+        color: white;
+        text-align: center;
+
+    }
+
     .uncovered{
         width: 130px;
         height: 130px;
     }
 
+    .uncoveredNr{
+        color: black;
+    }
+
     .done{
         width: 100px;
-        height: 100px
+        height: 100px;
+        pointer-events: none;
     }
 </style>
+<!--
 <table>
     <tr>
-        <td onclick="show(this)" id="11" style="border-style: solid"><img class="covered" src="forest.jpg"></td>
+        <td onclick="show(this)" id="11" style="border-style: solid"><img class="covered" src="Czibula-Gabriela.jpg"></td>
         <td onclick="show(this)" id="12" style="border-style: solid"><img class="covered" src="bufny.jpg"></td>
     </tr>
     <tr>
@@ -46,12 +58,31 @@
     </tr>
     <tr>
         <td onclick="show(this)" id="31" style="border-style: solid"><img class="covered" src="diosan.jpg"></td>
-        <td onclick="show(this)" id="32" style="border-style: solid"><img class="covered" src="forest.jpg"></td>
+        <td onclick="show(this)" id="32" style="border-style: solid"><img class="covered" src="Czibula-Gabriela.jpg"></td>
     </tr>
     <tr>
         <td onclick="show(this)" id="41" style="border-style: solid"><img class="covered" src="diosan.jpg"></td>
         <td onclick="show(this)" id="42" style="border-style: solid"><img class="covered" src="andreica.jpg"></td>
     </tr>
-
+</table>
+-->
+<table>
+    <tr>
+        <td onclick="showNr(this)" id="11" style="border-style: solid" class="coveredNr">5</td>
+        <td onclick="showNr(this)" id="12" style="border-style: solid" class="coveredNr">7</td>
+    </tr>
+    <tr>
+        <td onclick="showNr(this)" id="21" style="border-style: solid" class="coveredNr">5</td>
+        <td onclick="showNr(this)" id="22" style="border-style: solid" class="coveredNr">6</td>
+    </tr>
+    <tr>
+        <td onclick="showNr(this)" id="31" style="border-style: solid" class="coveredNr">2</td>
+        <td onclick="showNr(this)" id="32" style="border-style: solid" class="coveredNr">7</td>
+    </tr>
+    <tr>
+        <td onclick="showNr(this)" id="41" style="border-style: solid" class="coveredNr">6</td>
+        <td onclick="showNr(this)" id="42" style="border-style: solid" class="coveredNr">2</td>
+    </tr>
+</table>
 </body>
 </html>
