@@ -26,7 +26,7 @@ function p2(){
         document.getElementById('date').setAttribute("style", "border-color: black");
     }
 
-    if(age<1 || age>100 || (new Date().getFullYear() - new Date(date).getFullYear()).toString() !== age){
+    if(age<1 || age>100 || (new Date().getFullYear() - new Date(date).getFullYear())    .toString() !== age){
         document.getElementById("errAge").innerHTML = "Varsta nu este introdusa corect!";
         nr=1;
         document.getElementById('age').setAttribute("style", "border-color: red");
