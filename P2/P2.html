@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>P2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+
+        var err1 = $("<p class='one'></p>").text("Numele este introdus gresit!"); $("body").append(err1); $("p.one").css("color", "red");
+        var err2 = $("<p class='two'></p>").text("Data nu este introdusa!"); $("body").append(err2); $("p.two").css("color", "red");
+        var err3 = $("<p class='three'></p>").text("Varsta este introdusa gresit!"); $("body").append(err3); $("p.three").css("color", "red");
+        var err4 = $("<p class='four'></p>").text("Emailul este incorect!"); $("body").append(err4); $("p.four").css("color", "red");
+        var good = $("<p class='five'></p>").text("Datele introduse sunt corecte!"); $("body").append(good); $("p.five").css("color", "green");
+        $("p.one").hide(); $("p.two").hide(); $("p.three").hide(); $("p.four").hide(); $("p.five").hide();
+
+
+        $("#submit").click(function(){
+
+            let nr = 0;
+
+            if($("#nume").val().length == 0){
+
+                $("#nume").css("border-color", "red");
+                $("p.one").show();
+                nr=1;
+            }
+            else {
+                $("p.one").hide();
+                $("#nume").css("border-color", "black")
+            }
+            if($("#data").val().length == 0){
+                $("#data").css("border-color", "red");
+                $("p.two").show();
+                nr=1;
+            }
+            else {
+                $("p.two").hide();
+                $("#data").css("border-color", "black")
+            }
+
+            if(isNaN($("#varsta").val()) || $("#varsta").val()<0 || $("#varsta").val()>100 || (new Date().getFullYear() - new Date($("#data").val()).getFullYear()).toString() !== $("#varsta").val()){
+                $("#varsta").css("border-color", "red");
+                $("p.three").show();
+                nr=1;
+            }
+            else{
+                $("#varsta").css("border-color", "black");
+                $("p.three").hide();
+            }
+
+
+            if($("#email").val().length == 0 || !/\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b/.test($("#email").val())){
+                $("#email").css("border-color", "red");
+                $("p.four").show();
+                nr=1;
+            }
+            else{
+                $("#email").css("border-color", "black");
+                $("p.four").hide();
+            }
+
+            if(nr==0) {
+                $("p.five").show()
+            }
+            else{
+                $("p.five").hide();
+            }
+        });
+    });
+</script>
+
+<form id="form">
+    Nume: <input type="text" id="nume" name="nume">
+    <br>
+    Data Nasterii: <input type="date" id="data" name="data">
+    <br>
+    Varsta: <input type="text" id="varsta" name="varsta">
+    <br>
+    Email: <input type="text" id="email" name="email">
+    <br>
+    <input type="button" value="Trimite" id="submit" name="submit">
+</form>
+
+</body>
+
+</html>
