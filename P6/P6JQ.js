@@ -1,5 +1,5 @@
 function shuffle(array) {
-    let tmp, current, top = array.length;
+    var tmp, current, top = array.length;
     if(top) while(--top) {
         current = Math.floor(Math.random() * (top + 1));
         tmp = array[current];
@@ -11,11 +11,11 @@ function shuffle(array) {
 
 $(document).ready(function(){
 
-    for (let a=[],i=0;i<9;++i) a[i]=i;
+    for (var a=[],i=0;i<9;++i) a[i]=i;
     a = shuffle(a);
 
-    let list = document.getElementsByTagName("td");
-    for(let i = 0; i < list.length; i ++){
+    var list = document.getElementsByTagName("td");
+    for(var i = 0; i < list.length; i ++){
         if(a[i] == 0) {
             list[i].innerHTML = "";
             continue;
@@ -26,9 +26,9 @@ $(document).ready(function(){
     $(document).keydown(function(e){
 
         e = e || window.event;
-        let list = document.getElementsByTagName("td");
-        let pozx = 0, pozy = 0;
-        for(let i = 0; i < list.length; i ++){
+        var list = document.getElementsByTagName("td");
+        var pozx = 0, pozy = 0;
+        for(var i = 0; i < list.length; i ++){
             if(list[i].innerHTML == ""){
                 pozx = i%3;
                 pozy = Math.floor(i/3);
